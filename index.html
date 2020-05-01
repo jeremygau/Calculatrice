@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Calculatrice</title>
+</head>
+<body onload="init();">
+    <div class="container">
+        <form class="calc" name="calc">
+            <input id="value" class="value" type="text" name="screen" readonly>
+            <span class="num clear" onclick="init();">C</span>
+            <span id="/" class="num" onclick="addItem(this);">/</span>
+            <span id="*" class="num" onclick="addItem(this);">*</span>
+            <span id="-" class="num" onclick="addItem(this);">-</span>
+            <span id="7" class="num" onclick="addItem(this);">7</span>
+            <span id="8" class="num" onclick="addItem(this);">8</span>
+            <span id="9" class="num" onclick="addItem(this);">9</span>
+            <span id="+" class="num plus" onclick="addItem(this);">+</span>
+            <span id="4" class="num" onclick="addItem(this);">4</span>
+            <span id="5" class="num" onclick="addItem(this);">5</span>
+            <span id="6" class="num" onclick="addItem(this);">6</span>
+            <span id="1" class="num" onclick="addItem(this);">1</span>
+            <span id="2" class="num" onclick="addItem(this);">2</span>
+            <span id="3" class="num" onclick="addItem(this);">3</span>
+            <span id="Enter" class="num equal" onclick="calculate();">=</span>
+            <span id="0" class="num zero" onclick="addItem(this);">0</span>
+            <span id="." class="num" onclick="addItem(this);">.</span>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

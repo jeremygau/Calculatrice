@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 10vh;
+	--space-cadet: #2b2d42ff;
+	--red: #d64045ff;
+	--yelow: #f3de8aff;
+	--color4: #5E244F;
+	--blue: #5171a5ff;
+}
+
+
+
+body {
+    background: var(--space-cadet);
+}
+
+.container {
+	padding-top: 10vh;
+}
+
+.calc {
+    height: 80vh;
+    width: 60vh;
+    max-width: 90vw;
+    display: grid;
+    margin: auto;
+}
+
+.calc .value {
+    grid-column: span 4;
+    text-align: right;
+    padding: 0 10px;
+    width: 60vh;
+	max-width: 90vw;
+}
+
+.calc span {
+	display: grid;
+	color: #fff;
+	background-color: var(--color4);
+	place-items: center;
+	border: 1px solid rgba(0,0,0,.1);
+	user-select:none; 
+}
+
+
+.calc span:active {
+	background: var(--yelow);
+	color: #111;
+}
+
+.calc span.clear {
+	background-color: var(--red);
+}
+
+.calc span.plus {
+	grid-row: span 2;
+}
+
+.calc span.zero {
+	grid-column: span 2;
+}
+
+.calc span.equal {
+	grid-row: span 2;
+	background: var(--blue);
+}
