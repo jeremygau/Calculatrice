@@ -5,7 +5,7 @@ let precedent;
 let dot;
 
 let addItem = (item) => {
-	let character = item.innerHTML; 
+	let character = item.innerHTML;
 	if (dot && isDot(character)) {
 		return;
 	}
@@ -62,7 +62,7 @@ let calculate = () => {
 		}
 	}
 	catch (e) {
-
+		console.log(e);
 	}
 }
 
@@ -71,8 +71,10 @@ let init = () => {
 }
 
 let highlight = (key) => {
+	console.log(key);
 	giveFocus();
 	document.getElementById(key.key).click();
+	key.preventDefault();
 }
 
 document.addEventListener('keypress', highlight);
